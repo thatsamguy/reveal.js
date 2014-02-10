@@ -1,388 +1,338 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+    <title>Case Study: Schoolbox - Scaling &amp; supporting on-premises apps</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Sam Bailey">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-	<body>
+  <body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h2>Case study:</h2>
+          <br>
+          <h1>Schoolbox</h1>
+          <br>
+          <h3>Scaling &amp; supporting on-premises apps</h3>
+          <br>
+          <p>
+            <small>Created by <a href="http://thatsamguy.com">Sam Bailey</a> / <a href="http://twitter.com/that_sam_guy">@that_sam_guy</a></small>
+          </p>
+          <p>
+            <small><a href="http://infrastructurecoders.com/">Infrastructure Coders</a> meetup 2014-02-11</small>
+          </p>
 
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+ <!--         <aside class="notes">
+            TODO: Speaker notes go here!
+          </aside>-->
+        </section>
+        <section>
+        <h2>Built by Alaress</h2>
+        <p>TODO: Maybe add the team photos?</p>
+        </section>
+        <section>
+          <h2>including me</h2>
+          <br>
+          <h3>Sam Bailey</h3>
+          <ul>
+            <li>Twitter: <a href="http://twitter.com/that_sam_guy">@that_sam_guy</a></li>
+            <li>Email: <a href="mailto:sam.bailey@alaress.com.au">sam.bailey@alaress.com.au</a></li>
+            <br>
+            <li>System Administrator at Alaress</li>
+            <li>DevOps wannabe</li>
+            <li>Packager for Mageia linux</li>
+            <li>Geek Dad</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Schoolbox is &hellip;</h2>
+          <br>
+          <p>web based</p>
+          <p>hosted on-premises</p>
+          <p>a learning management system</p>
+          <p>an intranet/portal</p>
+          <p>designed for Prep to Year 12 schools</p>
+          <p>accessible from anywhere* on desktop/tablet/mobile</p>
+          <p>
+            <br>
+            <small>* well almost - with internet access and a supported browser**</small>
+            <br>
+            <small>** we even support IE&hellip; well 9+ anyway</small>
+          </p>
+        </section>
+        <section>
+          <h2>TLDR?</h2>
+          <br>
+          <p>The school's online communication &amp; learning space for Students, Teachers &amp; Parents.</p>
+        </section>
+        <section>
+          <h2>Features</h2>
+          <small>(we have some)</small>
+          <br>
+          <table style="margin: 0 auto;width:85%">
+            <tbody>
+              <tr>
+                <td>News</td>
+                <td>Calendar</td>
+              </tr>
+              <tr>
+                <td>Timetables</td>
+                <td>Online Grading</td>
+              </tr>
+              <tr>
+                <td>Courses</td>
+                <td>Continuous Reporting</td>
+              </tr>
+              <tr>
+                <td>Homework submissions</td>
+                <td>Resource Management</td>
+              </tr>
+              <tr>
+                <td>Forums</td>
+                <td>Wiki</td>
+              </tr>
+              <tr>
+                <td>Parent Directory</td>
+                <td>Live Chat</td>
+              </tr>
+              <tr>
+                <td>Groups</td>
+                <td>Surveys</td>
+              </tr>
+              <tr>
+                <td>Online Testing</td>
+                <td>Dynamic Homepages</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h2>Where we were &hellip;</h2>
+          <br>
+          <ul>
+            <li>Started in 2001 with Melbourne Grammar School</li><br>
+            <li>12 schools by June 2012 (when I joined)</li><br>
+            <li>Begin pivot whole company to Schoolbox</li><br>
+            <li>Looking to scale quickly</li>
+          </ul>
+        </section>
+        <section>
+          <h2>What we had &hellip;</h2>
+          <ul>
+            <li>Used SVN (poorly)</li><br>
+            <li>Single instance for development shared between all developers</li><br>
+            <li>Prod servers:
+              <ul>
+                <li>4 different versions of Ubuntu</li>
+                <li>1 version of CentOS</li>
+              </ul>
+            </li><br>
+            <li>Deploy with tarball &amp; complex bash scripts</li><br>
+            <li>Frequent regressions with minor releases</li><br>
+            <li>Poor testing &amp; demonstration data</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Not your grandmother's LAMP stack</h2>
+          <br>
+          <p>Ubuntu LTS / CentOS</p>
+          <p>Apache</p>
+          <p>MySQL</p>
+          <p>PHP</p>
+          <p>Redis</p>
+          <p>RabbitMQ</p>
+          <p>WebSockets</p>
+        </section>
+        <section>
+          <h2>All your data<br>are belong to us</h2>
+          <br>
+          <p>We connect to &amp; pull data from many other onsite and offsite services.</p>
+          <br>
+          <table style="margin: 0 auto;width:70%">
+            <tbody>
+              <tr>
+                <td>MSSQL</td>
+                <td>IBM DB2</td>
+              </tr>
+              <tr>
+                <td>Active Directory</td>
+                <td>Novell eDirectory</td>
+              </tr>
+              <tr>
+                <td>SharePoint</td>
+                <td>WebDav on IIS</td>
+              </tr>
+              <tr>
+                <td>SAML</td>
+                <td>Kerberos</td>
+              </tr>
+              <tr>
+                <td>Google Calendar</td>
+                <td>Microsoft Exchange</td>
+              </tr>
+              <tr>
+                <td>Twitter</td>
+                <td>RSS</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h2>June 2012 -> NOW()</h2>
+          <h4>Starting to scale</h4>
+          <br>
+          <ul>
+            <li>Migrated to Git &amp; GitHub</li><br>
+            <li>Implemented peer review via Pull Request</li><br>
+            <li>Significantly improved demo &amp; testing data</li><br>
+            <li>Moved all prod to Ubuntu LTS or CentOS</li><br>
+            <li>Deploy via Puppet with deb/RPM packages (one master)</li><br>
+            <li>Team uses prod-like Vagrant boxes for development</li><br>
+        </section>
+        <section>
+          <h2>June 2012 -> NOW()</h2>
+          <h4>The results so far&hellip;</h4>
+          <br>
+          <ul>
+            <li>Fewer regressions</li><br>
+            <li>Better deploys</li><br>
+            <li>Happier team</li><br>
+            <li>More clients (35+ across Aus &amp; NZ)</li><br>
+            <li>Good times</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Where we are &hellip;</h2>
+          <br>
+          <p>
+            <small>I'm here!</small>
+          </p>
+        </section>
+        <section>
+          <h2>Onsite vs Cloud</h2>
+          <br>
+          <ul>
+            <li>We operate and manage each server under an SLA</li><br>
+            <li>However each School varies greatly</li><br>
+            <li>Things we can't control:
+              <ul>
+                <li>Network</li>
+                <li>Power (the electricty thing)</li>
+                <li>Hardware</li>
+                <li>Internet Connectivity</li>
+                <li>Firewall/s (!!!)</li>
+                <li>Proxy</li>
+                <li>Skill level of onsite technical personel</li>
+                <li>Internal or outsourced IT Support</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>What's next?</h2>
+          <br>
+          <ul>
+            <li>Automate testing (and writing more tests)</li><br>
+            <li>Dashboards</li><br>
+            <li>Better internal Puppet modules and coverage</li><br>
+            <li>More DevOps*</li><br>
+            <li>Cloud based hosted edition</li><br>
+            <li>? Hipchat/Robots</li><br>
+            <p><small>* DevOps is a culture not a team!</small></p>
+        </section>
+        <section>
+          <h2>Pet peeves</h2>
+          <br>
+          <ul>
+            <li>Unreliable Ubuntu mirrors</li><br>
+            <li>Manual signing of packges/repositories</li><br>
+            <li>Automating upgrades of OS packages</li><br>
+            <li>Puppet the Puppet Master</li><br>
+            <li>Prod is all pets, not cattle</li>
+        </section>
+        <section>
+          <h1>THE END</h1>
+        </section>
+        <section>
+          <h2>Currently hiring?</h2>
+          <br>
+          <p>No.</p>
+          <br><br><br>
+          <p>But we will be at some stage ;)</p>
+        </section>
+        <section>
+          <h2>Questions, Suggestions &amp; Feedback?</h2>
+          <br>
+          <p><a href="#/13">Onsite vs Cloud</a></p>
+          <p><a href="#/14">What's Next?</a></p>
+          <p><a href="#/15">Pet Peeves</a></p>
+          <br><br>
+          <p><small>Sam Bailey / @that_sam_guy</small>
+        </section>
+      </div>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+    </div>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
-				</section>
+    <script>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+    </script>
 
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
-
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
-
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
-				</section>
-
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
-
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
-
-			</div>
-
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
+  </body>
 </html>

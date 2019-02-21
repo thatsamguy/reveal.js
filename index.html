@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Observability 101</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -24,8 +24,109 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Observability 101
+
+						Moving beyond monitoring
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## But what exactly is observability?
+
+						>“In control theory, observability is a measure of how well internal states of a system can be inferred by knowledge of its external outputs. The observability and controllability of a system are mathematical duals.” -  [Wikipedia](https://en.wikipedia.org/wiki/Observability)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## No, really...
+
+						>“[...] observability means you can answer any questions about what’s happening on the inside of the system just by observing the outside of the system, without having to ship new code to answer new questions. " -  [Charity Majors](https://docs.honeycomb.io/thinking-about-observability/intro-to-observability/)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Business Intelligence (BI)
+
+						but instead for systems information
+					</textarea>
+				</section>
+				<section>
+						<h2>So what do we need?</h2>
+						<section data-markdown><textarea data-template>
+						* A heap of data about what is happening within our systems
+						</textarea></section>
+						<section data-markdown><textarea data-template>
+						* The ability to easily ask questions about that data and understand the answers
+						</textarea></section>
+						<section data-markdown><textarea data-template>
+						* Lots of context information
+						</textarea></section>
+						<section data-markdown><textarea data-template>
+						* Clear understanding of how that information passed through the system
+
+						(woo! microservices!)
+						</textarea></section>
+				</section>
+				<section>
+					<h2>Monitoring != Observability</h2>
+					<section data-markdown><textarea data-template>
+						[Simon Wistow](https://www.fastly.com/blog/monitoring-vs-observability):
+						>Monitoring and logs are no longer enough
+					</textarea></section>
+					<section data-markdown><textarea data-template>
+						>Monitoring is the activity of observing the state of a system over time. [...] Monitoring alerts are reactive–they tell you when a known issue has already occurred.
+						>[...] Which begs an important question, “what about the problems that you didn’t predict?”
+					</textarea></section>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						![Venn diagram of Observability, Monitoring and Testing](https://cdn-images-1.medium.com/max/1600/1*9BQUrLJoR_SE69Kd8oVlVw.png "Venn diagram of Observability, Monitoring and Testing")
+						by [Cindy Sridharan](https://medium.com/@copyconstruct/monitoring-and-observability-8417d1952e1c)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## 99.95% SLA
+
+						### LIES!
+						![AWS Status Page](file:///home/thatsamguy/github/reveal.js/aws.png)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Pillars
+
+						* Monitoring (metrics)
+						* Tracing (including distributed tracing)
+						* Analytics/Visualisations
+						* Alerting
+						* Logging
+					</textarea>
+				</section>
+				<section>
+					<h2>In practice</h2>
+					<section data-markdown><textarea data-template>
+    Structured logging - ensuring as must context as possible is included in each event, especially including high cardinality fields
+	</textarea></section>
+					<section data-markdown><textarea data-template>
+Distributed tracing
+
+Being able to follow a request coming into and out of the system through the many sub-systems owned by multiple teams across a business
+	</textarea></section>
+					<section data-markdown><textarea data-template>
+					Visualisation/Analytics tooling - bringing all the data together and allowing easy and timely access to the information
+	</textarea></section>
+					<section data-markdown><textarea data-template>
+Process change - engineers using the fast feedback loops frequently - build, deploy, observe
+
+Gain understanding of what is normal/abnormal in a system
+
+Ensure that the change had the desired impact quickly
+	</textarea></section>
+					</textarea>
+				</section>
 			</div>
 		</div>
 

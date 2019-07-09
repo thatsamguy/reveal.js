@@ -29,6 +29,23 @@
 						## Observability 101
 
 						Moving beyond monitoring
+
+						``` SQL
+						SELECT o11y FROM talks WHERE author = "@that_sam_guy"
+						```
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Who me?
+
+						Sam Bailey
+
+						Systems Engineer at REA Group
+
+						Twitter: @that_sam_guy
+
+						Web: thatsamguy.com
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -128,21 +145,6 @@
 				<section>
 					<h2>In practice</h2>
 					<section data-markdown><textarea data-template>
-						### Structured logging of events
-
-						Ensuring as must context as possible is included in each event, especially including high cardinality fields
-					</textarea></section>
-					<section data-markdown><textarea data-template>
-						### Distributed tracing
-
-						Being able to follow a request coming into and out of the system through the many sub-systems owned by multiple teams across a business
-					</textarea></section>
-					<section data-markdown><textarea data-template>
-						### Visualisation/Analytics tooling
-
-						Bringing all the data together and allowing *easy* and *timely* access to the information
-					</textarea></section>
-					<section data-markdown><textarea data-template>
 						### Process change
 
 						Engineers using fast feedback loops
@@ -151,19 +153,47 @@
 
 						Ensure that the change had the desired impact (capability/performance)
 					</textarea></section>
+					<section data-markdown><textarea data-template>
+						### Structured logging of events
+
+						Ensuring as must context as possible is included in each event, especially including high cardinality fields
+
+						Logs != Events
+					</textarea></section>
+					<section data-markdown><textarea data-template>
+						### Visualisation/Analytics tooling
+
+						Bringing all the data together and allowing *easy* and *timely* access to the information
+					</textarea></section>
+					<section data-markdown><textarea data-template>
+						### Tracing
+
+						Being able to follow a request coming into and out of the system through the many sub-systems owned by multiple teams across a business
+
+						Events + relationships = trace
+					</textarea></section>
+					<section data-markdown><textarea data-template>
+						### Alerting
+
+						Alert only on things that matter - things that affect users and the business
+					</textarea></section>
 					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
 						## Goals
 
-						* Reduce time to debug issues [Robustness, Cost of Ownership]
+						* Happier humans
 
-						* Improve ability to detect unexpected issues [Robustness]
+						* Reduce time to debug issues
 
-						* Enable Product Owner to ask more questions (BI)
+						* Improve ability to detect unexpected issues
+
+						* Enable Product Owners to ask more questions
 
 						* Enable better system design decisions with data
+
+						* Fast feedback on changes
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -173,6 +203,17 @@
 						![Questions](https://media.giphy.com/media/dXICCcws9oxxK/giphy.gif "Questions")
 
 						Source: [Giphy](https://media.giphy.com/media/dXICCcws9oxxK/giphy.gif)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Bonus Question
+
+						Can I buy some Observability?
+
+						No. Just like DevOps, o11y is a culture with a set of processes, not a tool.
+
+						And no - "Azure DevOps" doesn't count either
 					</textarea>
 				</section>
 			</div>

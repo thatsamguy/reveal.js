@@ -4,14 +4,13 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Observability 101</title>
 
-		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/nightowl.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -25,11 +24,161 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Observability 101
+
+						Moving beyond monitoring
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## But what exactly is observability?
+
+						>“In control theory, observability is a measure of how well internal states of a system can be inferred by knowledge of its external outputs.”
+
+						\-  [Wikipedia](https://en.wikipedia.org/wiki/Observability)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						![Boring!](https://i.giphy.com/media/4LwKrBfFQgBaw/giphy.webp "Boring!")
+
+						Source: [Giphy](https://i.giphy.com/media/4LwKrBfFQgBaw/giphy.webp)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## How about for software systems?
+
+						>“[…] observability means you can answer any questions about what’s happening on the inside of the system just by observing the outside of the system, without having to ship new code to answer new questions.”
+
+						\-  [Charity Majors](https://docs.honeycomb.io/thinking-about-observability/intro-to-observability/)
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Business Intelligence (BI)
+
+						but instead for systems information
+					</textarea>
+				</section>
+				<section>
+						<h2>So what do we need?</h2>
+						<section data-markdown><textarea data-template>
+						* A heap of data about what is happening within our systems
+						</textarea></section>
+						<section data-markdown><textarea data-template>
+						* The ability to easily ask questions about that data and understand the answers
+						</textarea></section>
+						<section data-markdown><textarea data-template>
+						* Lots of context information
+						</textarea></section>
+						<section data-markdown><textarea data-template>
+						* Clear understanding of how that information passed through the system
+						</textarea></section>
+				</section>
+				<section>
+					<h2>Monitoring != Observability</h2>
+					<section data-markdown><textarea data-template>
+						>Monitoring alerts are reactive–they tell you when a known issue has already occurred.
+						>
+						>[…]
+						>Which begs an important question, “what about the problems that you didn’t predict?”
+
+						\- [Simon Wistow](https://www.fastly.com/blog/monitoring-vs-observability)
+					</textarea></section>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						![Venn diagram of Observability, Monitoring and Testing](https://cdn-images-1.medium.com/max/600/1*9BQUrLJoR_SE69Kd8oVlVw.png "Venn diagram of Observability, Monitoring and Testing")
+
+						###### Source: [Cindy Sridharan](https://medium.com/@copyconstruct/monitoring-and-observability-8417d1952e1c)
+					</textarea>
+				</section>
+				<section>
+					<h2>99.95% SLA</h2>
+					<section data-markdown><textarea data-template>
+					### LIES!
+					![AWS Status Page](file:///home/thatsamguy/github/reveal.js/aws.png)
+					</textarea></section>
+					<section data-markdown><textarea data-template>
+					### What does it really mean?
+
+					* 99.5% of your users at 100% SLA
+
+					* 0.5% of your users at 0 to 50% SLA
+
+					* Dashboards all "green"
+
+					* We *really* want to know about the affected users
+					</textarea></section>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## All the things
+
+						* Monitoring (metrics)
+						* Tracing (including distributed tracing)
+						* Analytics/Visualisations
+						* Alerting
+						* Logging
+					</textarea>
+				</section>
+				<section>
+					<h2>In practice</h2>
+					<section data-markdown><textarea data-template>
+						### Structured logging of events
+
+						Ensuring as must context as possible is included in each event, especially including high cardinality fields
+					</textarea></section>
+					<section data-markdown><textarea data-template>
+						### Distributed tracing
+
+						Being able to follow a request coming into and out of the system through the many sub-systems owned by multiple teams across a business
+					</textarea></section>
+					<section data-markdown><textarea data-template>
+						### Visualisation/Analytics tooling
+
+						Bringing all the data together and allowing *easy* and *timely* access to the information
+					</textarea></section>
+					<section data-markdown><textarea data-template>
+						### Process change
+
+						Engineers using fast feedback loops
+
+						* build, deploy, observe
+
+						Ensure that the change had the desired impact (capability/performance)
+					</textarea></section>
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Goals
+
+						* Reduce time to debug issues [Robustness, Cost of Ownership]
+
+						* Improve ability to detect unexpected issues [Robustness]
+
+						* Enable Product Owner to ask more questions (BI)
+
+						* Enable better system design decisions with data
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Questions
+
+						![Questions](https://media.giphy.com/media/dXICCcws9oxxK/giphy.gif "Questions")
+
+						Source: [Giphy](https://media.giphy.com/media/dXICCcws9oxxK/giphy.gif)
+					</textarea>
+				</section>
 			</div>
 		</div>
 
+		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
@@ -41,7 +190,7 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
 		</script>
